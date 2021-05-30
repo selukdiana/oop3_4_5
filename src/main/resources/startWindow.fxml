@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="499.0" spacing="15.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StartWindowController">
+   <children>
+      <TableView fx:id="heroTableView" prefHeight="430.0" prefWidth="151.0">
+        <columns>
+          <TableColumn fx:id="nameHeroColumn" prefWidth="75.0" text="Name product" />
+          <TableColumn fx:id="typeHeroColumn" prefWidth="75.0" text="Type product" />
+        </columns>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" top="5.0" />
+         </HBox.margin>
+      </TableView>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="25.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addHero" text="Add product">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#editHero" text="Edit product" />
+            <Button mnemonicParsing="false" onAction="#deleteHero" text="Delete product" />
+            <Button mnemonicParsing="false" onAction="#clearTable" text="Clear table" />
+            <ComboBox fx:id="fileExtensionBox" prefWidth="150.0" promptText="Select serialize file" />
+            <ComboBox fx:id="pluginCheckBox" prefWidth="150.0" promptText="Select plugin" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#loadDataTable" text="Load" />
+                  <Button mnemonicParsing="false" onAction="#saveDataTable" text="Save" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
